@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario - EC Island</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="logo-title">
+        <img src="img/logo.png" alt="Logo della squadra" class="immagine">
+        <h1>EC Island</h1>
+    </div>
+
+    <nav class="navabarra">
+        <ul class="navbar">
+            <li>
+                <a href="index.html">Presentazione</a>
+            </li>
+            <li>
+                <a href="roster.html">Roster</a>
+            </li>
+            <li>
+                <a href="merch.html">Merchandising</a>
+            </li>
+            <li>
+                <a href="calendario.html">Calendario Partite</a>
+            </li>
+            <li>
+                <a href="sponsor.html">Sponsor</a>
+            </li>
+            <li>
+                <a href="contatti.html">Contatti</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container calendar-container">
+        <h1 class="calendar-title">Calendario Torneo</h1>
+
+        <!-- Avviso mostrato se NON è la data del torneo -->
+        <div id="blocked-msg" class="blocked-box">
+            <h2>Il torneo non è ancora iniziato!</h2>
+            <p>Torna la data del torneo per consultare il calendario delle partite.</p>
+        </div>
+
+        <!-- Contenuto del calendario mostrato SOLO nella data del torneo -->
+        <div id="calendar-content" class="calendar-content-box" style="display: none;">
+            <h2>Partite in Programma</h2>
+            <table class="calendar-table">
+                <thead>
+                    <tr>
+                        <th>Ora</th>
+                        <th>Match</th>
+                        <th>Girone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>15:00</td>
+                        <td>EC Island vs Team Alpha</td>
+                        <td>Girone A</td>
+                    </tr>
+                    <tr>
+                        <td>16:30</td>
+                        <td>Team Beta vs EC ISLAND</td>
+                        <td>Girone A</td>
+                    </tr>
+                    <tr>
+                        <td>18:00</td>
+                        <td>EC Island vs Team Gamma</td>
+                        <td>Girone A</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function checkTournamentDate() {
+            const today = new Date();
+            
+            // In JavaScript i mesi partono da 0 (Gennaio = 0, in questo caso Ottobre = 9)
+            const currentMonth = today.getMonth(); 
+
+            const blockedDiv = document.getElementById('blocked-msg');
+            const calendarDiv = document.getElementById('calendar-content');
+
+            // Controllo data
+            if (currentMonth >= 9) {
+                blockedDiv.style.display = 'none';
+                calendarDiv.style.display = 'block';
+            } else {
+                blockedDiv.style.display = 'block';
+                calendarDiv.style.display = 'none';
+            }
+        }
+
+        checkTournamentDate();
+    </script>
+</body>
+</html>

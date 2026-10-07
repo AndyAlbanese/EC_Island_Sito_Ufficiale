@@ -1,0 +1,224 @@
+.logo-title{
+    text-align: center; 
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo-title .immagine {
+    display: flex;
+    width: 15%;
+}
+.immagine{
+    width: 100%;
+}
+
+.navabarra{
+    background-color: rgb(0, 0, 199);
+    border: 1px solid darkblue;
+    border-radius: 21px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+
+    
+}
+
+.navbar >li >a:link{
+    text-decoration: none;
+    color: white;
+}
+
+.navbar >li>a:visited{
+    color: white;
+}
+
+.navbar >li>a:hover{
+    color: rgb(136, 136, 136)
+}
+
+.presentazione{
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #2300e9ad;
+    font-family: Arial, sans-serif;
+}
+
+/* Centra la sezione e limita la larghezza massima della tabella */
+.squadre {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.tabellaFC27 {
+    margin-top:20px;
+    margin-right: 20px;
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    border: 2px solid #000;
+}
+
+.tabellaFC27 .titolo-squadra {
+    background-color: #2b3bb3;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 2px solid #000;
+}
+
+.tabellaFC27 .intestazione-colonne th {
+    background-color: #8be0f0;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #000;
+    width: 33.33%;
+}
+
+.tabellaFC27 td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tabella-eFootball {
+    margin-top:20px;
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    border: 2px solid #000;
+}
+
+.tabella-eFootball .titolo-squadra {
+    background-color: #2b3bb3;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 2px solid #000;
+}
+
+.tabella-eFootball .intestazione-colonne th {
+    background-color: #8be0f0;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #000;
+    width: 33.33%;
+}
+
+.tabella-eFootball td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.merchandising{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.merchandising h2{
+    color: #2b3bb3;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.merchandising p{
+    font-size: 16px;
+    margin: 10px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.merchandising br{
+    border: 2px solid black;
+}
+
+.merch-image{
+    width: 768px;
+    height: auto;
+    margin: 10px;
+    border-radius: 30px;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #1e293b;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: #ffffff;
+}
+
+.container h1 {
+    color: #38bdf8;
+    margin-bottom: 25px;
+}
+
+/* Messaggio di Blocco */
+#blocked-msg {
+    color: #f43f5e;
+    padding: 25px;
+    border: 2px dashed #f43f5e;
+    border-radius: 8px;
+    background-color: rgba(244, 63, 94, 0.1);
+    margin: 20px 0;
+}
+
+#blocked-msg h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+}
+
+/* Tabella Calendario */
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.calendar-table th, 
+.calendar-table td {
+    padding: 12px 15px;
+    border: 1px solid #334155;
+    text-align: center;
+}
+
+.calendar-table th {
+    background-color: #0284c7;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.calendar-table tr:nth-child(even) {
+    background-color: #0f172a;
+}
+
+.calendar-table tr:hover {
+    background-color: #334155;
+}
