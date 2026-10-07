@@ -38,10 +38,10 @@
     </nav>
 
 
-    <div class="contatti">
-    <h2>Inserisci i tuoi contatti, e ti contatteremo il prima possbile!</h2>
+    <div class="card">
+    <h2>Inserisci le tue informazioni per tenerci in contatto:</h2>
 
-    <!-- FORM DEI CONTATTI-->
+    <!-- FORM DI REGISTRAZIONE -->
     <form id="registrationForm">
         <div class="form-group">
             <label for="nome">Nome completo:</label>
@@ -65,18 +65,20 @@
     const form = document.getElementById('registrationForm');
     const messaggio = document.getElementById('messaggio');
 
-    //IL LISTENER "ASCOLTA" e ASPETTA che l'utente prema il tasco "submit"
+    // Ascoltiamo l'evento di invio del modulo
     form.addEventListener('submit', function(event) {
-        // Si evita che la pagina si ricarichi (comportamento predefinito dell'HTML)
+        // Evitiamo che la pagina si ricarichi (comportamento predefinito dell'HTML)
         event.preventDefault();
 
-        // Mostra un messaggio di successo all'utente
-        messaggio.textContent = "Informazioni inviate con successo!";
+        // 1. Qui in futuro potrai inserire il codice per inviare i dati a un server (es. con fetch)
 
-        // Svuota tutti i campi del form
+        // 2. Mostriamo un messaggio di successo all'utente
+        messaggio.textContent = "Informazioni con successo!";
+
+        // 3. Svuotiamo tutti i campi del form
         form.reset();
 
-        // Nasconde il messaggio di successo dopo 4 secondi
+        // Facoltativo: nasconde il messaggio di successo dopo 4 secondi
         setTimeout(() => {
             messaggio.textContent = '';
         }, 4000);
