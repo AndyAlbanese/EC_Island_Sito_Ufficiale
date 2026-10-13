@@ -50,25 +50,35 @@
             <table class="calendar-table">
                 <thead>
                     <tr>
-                        <th>Ora</th>
+                        <th>Data</th> <!--E' Piu' corretto mettere Data piuttosto che ORA dato che le partite non possono essere ammassate in un giorno-->
                         <th>Match</th>
                         <th>Girone</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>15:00</td>
+                        <td>09/10/2026 15:00</td>
                         <td>EC Island vs Team Alpha</td>
                         <td>Girone A</td>
                     </tr>
                     <tr>
-                        <td>16:30</td>
+                        <td>12/10/2026 16:30</td>
                         <td>Team Beta vs EC ISLAND</td>
                         <td>Girone A</td>
                     </tr>
                     <tr>
-                        <td>18:00</td>
+                        <td>18/10/2026 18:00</td>
                         <td>EC Island vs Team Gamma</td>
+                        <td>Girone A</td>
+                    </tr>
+                    <tr>
+                        <td>23/10/2026 10:00</td>
+                        <td>Team Seas vs EC Island</td>
+                        <td>Girone A</td>
+                    </tr>
+                    <tr>
+                        <td>30/10/2026 23:00</td>
+                        <td>EC Island vs Team Octopus</td>
                         <td>Girone A</td>
                     </tr>
                 </tbody>
@@ -83,10 +93,11 @@
             // In JavaScript i mesi partono da 0 (Gennaio = 0, in questo caso Ottobre = 9)
             const currentMonth = today.getMonth(); 
 
-            const blockedDiv = document.getElementById('blocked-msg');
+            
+            const blockedDiv = document.getElementById('blocked-msg'); //Messaggio bloccato --> Torneo non ancora iniziato
             const calendarDiv = document.getElementById('calendar-content');
 
-            // Controllo data
+            // Controllo data, il torneo parte ogni mese dal 9 fino a fine mese
             if (currentMonth >= 9) {
                 blockedDiv.style.display = 'none';
                 calendarDiv.style.display = 'block';
